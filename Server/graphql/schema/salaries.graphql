@@ -1,0 +1,10 @@
+type Salary {
+  emp_no: String
+  salary: Integer
+  from_date:
+  to_date
+}
+
+type Query {
+  department(id: String): [Department]
+}

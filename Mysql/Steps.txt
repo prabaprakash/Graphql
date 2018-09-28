@@ -1,0 +1,14 @@
+1. Mysql
+$ docker run -d --name some-mysql -p 3306:3306 -e MYSQL_ROOT_HOST=% -e MYSQL_ROOT_PASSWORD=password mysql/mysql-server
+for global access
+ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'password123';
+please do it before
+apt update && apt install git -y
+git clone https://github.com/prabaprakash/test_db.git
+apt remove --purge git -y
+cd /test_db
+mysql -u root -ppassword123  < employees.sql
+rm -rf test_db
+
+2. Adminer 
+$ docker run --link some-mysql:db -p 8080:8080 adminer

@@ -1,0 +1,28 @@
+scalar Date
+
+type Department {
+  dept_no: String
+  dept_name: String
+}
+
+type Salary {
+  emp_no: String
+  salary: Int
+  from_date: Date
+  to_date: Date
+}
+
+type Employees {
+  emp_no: Int
+  birth_date: Date
+  first_name: String
+  last_name: String
+  gender: ID
+  hire_date: Date
+}
+
+type Query {
+  department(id: String): [Department]
+  salary(id: String): [Salary]  
+  employees(id: String) : [Employees]
+}
