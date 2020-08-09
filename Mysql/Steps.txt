@@ -1,4 +1,5 @@
 1. Mysql
+user port 8080
 $ docker run -d --name some-mysql -p 3306:3306 -e MYSQL_ROOT_HOST=% -e MYSQL_ROOT_PASSWORD=password mysql/mysql-server
 for global access
 mysql -u root -ppassword
