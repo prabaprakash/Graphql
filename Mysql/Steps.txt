@@ -9,6 +9,8 @@ git clone https://github.com/prabaprakash/test_db.git
 apt remove --purge git -y
 cd /test_db
 mysql -u root -ppassword123  < employees.sql
+
+mysql -h 127.0.0.1 -u root -ppassword123  < employees.sql
 rm -rf test_db
 
 2. Adminer 
