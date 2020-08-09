@@ -1,6 +1,6 @@
 1. Mysql
 user port 8080
-$ docker run -d --name some-mysql -p 3306:3306 -e MYSQL_ROOT_HOST=% -e MYSQL_ROOT_PASSWORD=password mysql/mysql-server
+$ docker run -d --name some-mysql -p 8080:3306 -e MYSQL_ROOT_HOST=% -e MYSQL_ROOT_PASSWORD=password mysql/mysql-server
 for global access
 mysql -u root -ppassword
 ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'password123';
